@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment1_Table Output&Processing</title>
+
+</head>
+<body>
+
+<!-- Table 1: Raw Data-->
+ <h2>Raw Data</h2>
+    <table border="1">
+        <tr>
+            <td>Index#</td>
+            <td>Value</td>
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td id="A1">41</td>
+        </tr>
+        <tr>
+            <td>A2</td>
+            <td id="A2">18</td>
+        </tr>
+        <tr>
+            <td>A3</td>
+            <td id="A3">21</td>
+        </tr>
+        <tr>
+            <td>A4</td>
+            <td id="A4">63</td>
+        </tr>
+        <tr>
+            <td>A5</td>
+            <td id="A5">2</td>
+        </tr>
+        <tr>
+            <td>A6</td>
+            <td id="A6">53</td>
+        </tr>
+        <tr>
+            <td>A7</td>
+            <td id="A7">5</td>
+        </tr>
+        <tr>
+            <td>A8</td>
+            <td id="A8">57</td>
+        </tr>
+        <tr>
+            <td>A9</td>
+            <td id="A9">60</td>
+        </tr>
+        <tr >
+            <td>A10</td>
+            <td id="A10">93</td>
+        </tr>
+        <tr>
+            <td>A11</td>
+            <td id="A11">28</td>
+        </tr>
+        <tr>
+            <td>A12</td>
+            <td id="A12">3</td>
+        </tr>
+        <tr>
+            <td>A13</td>
+            <td id="A13">90</td>
+        </tr>
+        <tr >
+            <td>A14</td>
+            <td id="A14">39</td>
+        </tr>
+        <tr >
+            <td>A15</td>
+            <td id="A15">80</td>
+        </tr>
+        <tr>
+            <td>A16</td>
+            <td id="A16">88</td>
+        </tr>
+        <tr>
+            <td>A17</td>
+            <td id="A17">49</td>
+        </tr>
+        <tr >
+            <td>A18</td>
+            <td id="A18">60</td>
+        </tr>
+        <tr id="A19">
+            <td>A19</td>
+            <td>26</td>
+        </tr>
+        <tr>
+            <td>A20</td>
+            <td id="A20">28</td>
+        </tr>
+    </table>
+    
+<!-- Table 2: Processed Data-->
+ <br><br>
+ <h2>Processed Data</h2>
+    <table border="1">
+        <tr>
+            <th>Category</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Alpha</td>
+            <td id="AlphaSum"></td>
+        </tr>
+        <tr>
+            <td>Beta</td>
+            <td id="BetaDiv"></td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td id="CharlieMul"></td>
+        </tr>
+    </table>
+
+
+<script>
+    a = parseInt(document.getElementById('A5').textContent, 10);
+    b = parseInt(document.getElementById('A20').textContent, 10);
+    let sumAlpha = a + b;
+    document.getElementById("AlphaSum").textContent = sumAlpha;
+
+    let c = parseFloat(document.getElementById('A15').textContent);
+    let d = parseFloat(document.getElementById('A7').textContent);
+    let divBeta = (c / d).toFixed(2);
+    document.getElementById("BetaDiv").textContent = divBeta;
+
+    e = parseInt(document.getElementById('A13').textContent, 10);
+    f = parseInt(document.getElementById('A12').textContent, 10);
+    let mulCharlie = e * f;
+    document.getElementById("CharlieMul").textContent = mulCharlie;
+</script>
+
+</body>
+</html>
